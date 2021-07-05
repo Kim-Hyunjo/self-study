@@ -1,15 +1,5 @@
-def main():
-    x = input()
-    cnt = 0
-    for b in x:
-        if b == "(":
-            cnt += 1
-        elif b == ")":
-            cnt -= 1
-    if cnt == 0:
-        print("YES")
-    else:
-        print("NO")
-
-if __name__=="__main__":
-    main()
+import heapq
+lst = ['2b', '1a', '3c', '1b', '2a', '3a']
+#heapq.heapify(lst)
+while lst:
+    print(heapq.heappop(lst))
