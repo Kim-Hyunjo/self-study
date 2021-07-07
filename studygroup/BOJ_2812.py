@@ -12,15 +12,15 @@ while removed < K:
     n = max(num[:left+1])
     n_idx = num.index(n)
     removed += n_idx
-    for _ in range(removed):
+    for _ in range(n_idx):
         num.pop(0)
     answer.append(num.pop(0))
-    N -= removed
-    left -= removed
+    left -= n_idx
     print(num)
     print(answer)
     print(removed)
+    print(left)
 
-print(int(''.join(answer)))
+print(int(''.join(answer+num)))
 
 
